@@ -22,7 +22,6 @@ public class TugasPL1 {
             System.out.print("\n");            
         }
         System.out.println("Jumlah Keseluruhan adalah\t\t: " + total + "\nRata-Ratanya adalah\t\t\t: " + total / putaran);  
-        
         /*ini taruh bawah biar ngga error prosesnyaa
         lanjut mencari posisi index dengan JOptionPane!
         keknya sih logikanya pakai looping ganfda kayak buat print*/
@@ -37,7 +36,7 @@ public class TugasPL1 {
         for(int i=0;i<nilai.length;i++){
             for(int f=0;f<nilai[i].length;f++){
                 if (nilai[i][f]==ganti){
-                    indeks += "["+i+"]["+f+"], ";//ternyata bisa ygy, tak kra cuman angka aja yang bisa
+                    indeks += "["+i+"]["+f+"]\n";//ternyata bisa ygy, tak kra cuman angka aja yang bisa
                     putaran++;
                 }
             }
