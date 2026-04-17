@@ -28,21 +28,21 @@ public class TugasPL1 {
         keknya sih logikanya pakai looping ganfda kayak buat print*/
         String elemen = JOptionPane.showInputDialog("Masukkan elemen yang ingin diganti\t: ");
         int ganti= Integer.parseInt(elemen);        
-        
-        System.out.println("Elemen "+ganti+" berada pada indeks\t\t:");
         /*variabel untuk mengantisipasi indeks tidak ditemukan
         Kita manfaatkan variabel putaran, kita ganti 0 dulu
         setelah itu kita taruh di putaran kedua, and...
         masukkan ganti*/
         putaran=0;
+        String indeks = "";
         for(int i=0;i<nilai.length;i++){
             for(int f=0;f<nilai[i].length;f++){
                 if (nilai[i][f]==ganti){
-                    System.out.print("["+i+"]["+f+"]\n");
+                    indeks += "["+i+"]["+f+"], ";//ternyata bisa ygy, tak kra cuman angka aja yang bisa
                     putaran++;
                 }
             }
         }
+        JOptionPane.showMessageDialog(null,"Elemen "+ganti+" berada pada indeks:\n"+indeks);
         if(putaran>0){
             //masukkan angka baru untuk pengganti
             System.out.print("\nMau diganti dengan angka berapa?\t:");
