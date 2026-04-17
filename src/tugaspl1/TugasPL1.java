@@ -12,7 +12,6 @@ public class TugasPL1 {
         for (int a = 0; a < nilai.length; a++) {
             for (int b = 0; b < nilai[a].length; b++) {
                 //menampilkan seluruh elemen
-                
                 System.out.print(nilai[a][b]+" ");
                 //menjumlahkan semua elemen
                 total += nilai[a][b];
@@ -61,12 +60,12 @@ public class TugasPL1 {
         }
                 /*menjumlahkan semua eleemnt yang mempunyai indeks ganjil
         Q apakah ngoding bareng bisa dilakukan realtime seperti canva, spreadsheet, doc dll?*/
-        double totalg =0;
+        total =0;
         for (int a = 0; a < nilai.length; a++) {
             for (int b = 0; b < nilai[a].length; b++) {
                 //menjumlahkan elemen indeks ganjil
                 if (b%2==1){
-                    totalg += nilai[a][b];
+                    total += nilai[a][b];
                 }
             }
         }
@@ -77,6 +76,6 @@ public class TugasPL1 {
             }
             System.out.print("\n");
         }
-        System.out.println("Jumlah indeks ganjil adalah\t\t: " + totalg);
+        System.out.println("Jumlah indeks ganjil adalah\t\t: " + total);
     }
 }
