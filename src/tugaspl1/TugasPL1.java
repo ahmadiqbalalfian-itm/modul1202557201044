@@ -21,27 +21,13 @@ public class TugasPL1 {
             }
             System.out.print("\n");            
         }
-        System.out.println("Jumlah Keseluruhan adalah\t\t: " + total + "\nRata-Ratanya adalah\t\t\t: " + total / putaran);
-        
-        /*menjumlahkan semua eleemnt yang mempunyai indeks ganjil
-        Q apakah ngoding bareng bisa dilakukan realtime seperti canva, spreadsheet, doc dll?*/
-        double totalg =0;
-        for (int a = 0; a < nilai.length; a++) {
-            for (int b = 0; b < nilai[a].length; b++) {
-                //menjumlahkan elemen indeks ganjil
-                if (b%2==1){
-                    totalg += nilai[a][b];
-                }
-            }
-        }
-        System.out.println("Jumlah indeks ganjil adalah\t\t: "+totalg);  
+        System.out.println("Jumlah Keseluruhan adalah\t\t: " + total + "\nRata-Ratanya adalah\t\t\t: " + total / putaran);  
         
         /*ini taruh bawah biar ngga error prosesnyaa
         lanjut mencari posisi index dengan JOptionPane!
         keknya sih logikanya pakai looping ganfda kayak buat print*/
-        int ganti=4;
-        System.out.println("Masukkan elemen yang ingin diganti\t: " + ganti);
-        
+        String elemen = JOptionPane.showInputDialog("Masukkan elemen yang ingin diganti\t: ");
+        int ganti= Integer.parseInt(elemen);        
         
         System.out.println("Elemen "+ganti+" berada pada indeks\t\t:");
         /*variabel untuk mengantisipasi indeks tidak ditemukan
@@ -82,5 +68,17 @@ public class TugasPL1 {
         } else{
             System.out.println("\nELEMEN TIDAK DITEMUKAN");
         }
+                /*menjumlahkan semua eleemnt yang mempunyai indeks ganjil
+        Q apakah ngoding bareng bisa dilakukan realtime seperti canva, spreadsheet, doc dll?*/
+        double totalg =0;
+        for (int a = 0; a < nilai.length; a++) {
+            for (int b = 0; b < nilai[a].length; b++) {
+                //menjumlahkan elemen indeks ganjil
+                if (b%2==1){
+                    totalg += nilai[a][b];
+                }
+            }
+        }
+        System.out.println("Jumlah indeks ganjil adalah\t\t: "+totalg);
     }
 }
