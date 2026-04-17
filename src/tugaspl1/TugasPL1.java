@@ -52,19 +52,13 @@ public class TugasPL1 {
             for (int i = 0; i < nilai.length; i++) {
                 for (int f = 0; f < nilai[i].length; f++) {
                     if (nilai[i][f] == ganti) {
-                        nilai [i][f]=baru;
+                        nilai[i][f] = baru;
                     }
                 }
-            } 
+            }
             //nah kemudian memunculkan lagi tuh hasil yang baru
-            for (int i = 0; i < nilai.length; i++) {
-                for (int f = 0; f < nilai[i].length; f++) {
-                    System.out.print(nilai[i][f]+" ");
-                }
-                System.out.print("\n");
-            } 
-        } else{
-            JOptionPane.showMessageDialog(null,"Elemen "+ganti+" tidak ditemukan pada Array","ELEMEN TIDAK DITEMUKAN", JOptionPane.ERROR_MESSAGE);
+        } else {
+            JOptionPane.showMessageDialog(null, "Elemen " + ganti + " tidak ditemukan pada Array", "ELEMEN TIDAK DITEMUKAN", JOptionPane.ERROR_MESSAGE);
         }
                 /*menjumlahkan semua eleemnt yang mempunyai indeks ganjil
         Q apakah ngoding bareng bisa dilakukan realtime seperti canva, spreadsheet, doc dll?*/
@@ -77,6 +71,13 @@ public class TugasPL1 {
                 }
             }
         }
-        System.out.println("Jumlah indeks ganjil adalah\t\t: "+totalg);
+        //meskipun error tetap ditampilkan ygy
+        for (int i = 0; i < nilai.length; i++) {
+            for (int f = 0; f < nilai[i].length; f++) {
+                System.out.print(nilai[i][f] + " ");
+            }
+            System.out.print("\n");
+        }
+        System.out.println("Jumlah indeks ganjil adalah\t\t: " + totalg);
     }
 }
