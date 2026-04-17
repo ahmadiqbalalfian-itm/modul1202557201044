@@ -40,17 +40,23 @@ public class TugasPL1 {
         lanjut mencari posisi index dengan JOptionPane!
         keknya sih logikanya pakai looping ganfda kayak buat print*/
         System.out.println("Masukkan elemen yang ingin diganti\t:");
-        int ganti=1;
+        int ganti=2;
         System.out.println("Elemen "+ganti+" berada pada indeks\t\t:");
+        //variabel buat jaga-jaga elemen undefine
+        String jaga ="";
         //masukkan ganti
-        
-        for(int i=0;i<nilai.length;i++){
-            
-            for(int f=0;f<nilai[i].length;f++){
-                if (nilai[i][f]==ganti){
-                    System.out.print("["+i+"]["+f+"]\n");
+        int f=0;
+        for (int i = 0; i < nilai.length; i++) {
+            while (f<nilai[i].length && jaga!="ELEMEN TIDAK DITEMUKAN"){
+                if (nilai[i][f] == ganti) {
+                    System.out.print("[" + i + "][" + f + "]\n");
+                } else {
+                    jaga = "ELEMEN TIDAK DITEMUKAN";
+                    System.out.println(jaga);
                 }
+                f++;
             }
+            
         }
         System.out.println("\nMau diganti dengan angka berapa?");
     }
