@@ -45,9 +45,8 @@ public class TugasPL1 {
         if(putaran>1){//ini mengecek jika ada posisi yang ditemukan
             JOptionPane.showMessageDialog(null,"Elemen "+ganti+" berada pada indeks:\n"+indeks);
             //masukkan angka baru untuk pengganti
-            System.out.print("\nMau diganti dengan angka berapa?\t:");
-            int baru = 0;
-            System.out.println(baru);
+            String angka = JOptionPane.showInputDialog("Mau diganti dengan angka berapa?");
+            int baru = Integer.parseInt(angka);
             
             //lanjut untuk mengganti elemennya, sementara gini sih, pakai looping ganda lagi
             for (int i = 0; i < nilai.length; i++) {
@@ -64,9 +63,8 @@ public class TugasPL1 {
                 }
                 System.out.print("\n");
             } 
-            
         } else{
-            JOptionPane.showMessageDialog(null,"ELEMEN TIDAK DITEMUKAN");
+            JOptionPane.showMessageDialog(null,"Elemen "+ganti+" tidak ditemukan pada Array","ELEMEN TIDAK DITEMUKAN", JOptionPane.ERROR_MESSAGE);
         }
                 /*menjumlahkan semua eleemnt yang mempunyai indeks ganjil
         Q apakah ngoding bareng bisa dilakukan realtime seperti canva, spreadsheet, doc dll?*/
