@@ -1,9 +1,8 @@
 package tugaspl1;
-//kita pakai Scanne dulu, nanti baru ganti JOptionPane yaww
-import java.util.Scanner;
+//langsung pakai JOptionPane je lahh
+import javax.swing.JOptionPane;
 public class TugasPL1 {
     public static void main(String[] args) {
-        Scanner fira = new Scanner(System.in);
         int nilai[][] = {{4,6,4,2,8,4,2,10},{4,6,4,2,8,4,2,10}};
         //variabel untuk menyimpan total semua elemen dalam array nilai
         double total = 0; //kuncinya
@@ -22,7 +21,7 @@ public class TugasPL1 {
             }
             System.out.print("\n");            
         }
-        System.out.println("Jumlah Keseluruhan adalah\t: " + total + "\nRata-Ratanya adalah\t\t: " + total / putaran);
+        System.out.println("Jumlah Keseluruhan adalah\t\t: " + total + "\nRata-Ratanya adalah\t\t\t: " + total / putaran);
         
         /*menjumlahkan semua eleemnt yang mempunyai indeks ganjil
         Q apakah ngoding bareng bisa dilakukan realtime seperti canva, spreadsheet, doc dll?*/
@@ -35,16 +34,24 @@ public class TugasPL1 {
                 }
             }
         }
-        System.out.println("Jumlah indeks ganjil adalah\t: "+totalg);  
+        System.out.println("Jumlah indeks ganjil adalah\t\t: "+totalg);  
         
         /*ini taruh bawah biar ngga error prosesnyaa
         lanjut mencari posisi index dengan JOptionPane!
-        Kita masukkan pakai Scanner dulu
         keknya sih logikanya pakai looping ganfda kayak buat print*/
-        System.out.println("Jika ada angka yang ingin diganti, masukkan satu angka\t:");
-        int ganti = firanext.Int;
+        System.out.println("Masukkan elemen yang ingin diganti\t:");
+        int ganti=1;
+        System.out.println("Elemen "+ganti+" berada pada indeks\t\t:");
+        //masukkan ganti
         
-        
-
+        for(int i=0;i<nilai.length;i++){
+            
+            for(int f=0;f<nilai[i].length;f++){
+                if (nilai[i][f]==ganti){
+                    System.out.print("["+i+"]["+f+"]\n");
+                }
+            }
+        }
+        System.out.println("\nMau diganti dengan angka berapa?");
     }
 }
