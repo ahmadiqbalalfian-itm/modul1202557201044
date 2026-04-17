@@ -42,8 +42,8 @@ public class TugasPL1 {
                 }
             }
         }
-        JOptionPane.showMessageDialog(null,"Elemen "+ganti+" berada pada indeks:\n"+indeks);
-        if(putaran>0){
+        if(putaran>1){//ini mengecek jika ada posisi yang ditemukan
+            JOptionPane.showMessageDialog(null,"Elemen "+ganti+" berada pada indeks:\n"+indeks);
             //masukkan angka baru untuk pengganti
             System.out.print("\nMau diganti dengan angka berapa?\t:");
             int baru = 0;
@@ -66,7 +66,7 @@ public class TugasPL1 {
             } 
             
         } else{
-            System.out.println("\nELEMEN TIDAK DITEMUKAN");
+            JOptionPane.showMessageDialog(null,"ELEMEN TIDAK DITEMUKAN");
         }
                 /*menjumlahkan semua eleemnt yang mempunyai indeks ganjil
         Q apakah ngoding bareng bisa dilakukan realtime seperti canva, spreadsheet, doc dll?*/
