@@ -47,27 +47,23 @@ public class TugasPL1 {
             int baru = Integer.parseInt(angka);
             
             //lanjut untuk mengganti elemennya, sementara gini sih, pakai looping ganda lagi
+            /*menjumlahkan semua eleemnt yang mempunyai indeks ganjil
+              Q apakah ngoding bareng bisa dilakukan realtime seperti canva, spreadsheet, doc dll?*/
+            total =0;
             for (int i = 0; i < nilai.length; i++) {
                 for (int f = 0; f < nilai[i].length; f++) {
+                    if (f%2==1){
+                    total += nilai[i][f];
+                }
                     if (nilai[i][f] == ganti) {
                         nilai[i][f] = baru;
                     }
+                    
                 }
             }
             //nah kemudian memunculkan lagi tuh hasil yang baru
         } else {
             JOptionPane.showMessageDialog(null, "Elemen " + ganti + " tidak ditemukan pada Array", "ELEMEN TIDAK DITEMUKAN", JOptionPane.ERROR_MESSAGE);
-        }
-                /*menjumlahkan semua eleemnt yang mempunyai indeks ganjil
-        Q apakah ngoding bareng bisa dilakukan realtime seperti canva, spreadsheet, doc dll?*/
-        total =0;
-        for (int a = 0; a < nilai.length; a++) {
-            for (int b = 0; b < nilai[a].length; b++) {
-                //menjumlahkan elemen indeks ganjil
-                if (b%2==1){
-                    total += nilai[a][b];
-                }
-            }
         }
         //meskipun error tetap ditampilkan ygy
         for (int i = 0; i < nilai.length; i++) {
