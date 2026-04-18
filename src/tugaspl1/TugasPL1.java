@@ -9,6 +9,7 @@ public class TugasPL1 {
         //variabel untuk menghitung jumlah angka/elemen array
         int putaran = 0; //the key
         //looping untuk memunculkan elemen array
+        System.out.println("ORIGINAL ARRAY");
         for (int a = 0; a < nilai.length; a++) {
             for (int b = 0; b < nilai[a].length; b++) {
                 //menampilkan seluruh elemen
@@ -20,7 +21,7 @@ public class TugasPL1 {
             }
             System.out.print("\n");            
         }
-        System.out.println("Jumlah Keseluruhan adalah\t\t: " + total + "\nRata-Ratanya adalah\t\t\t: " + total / putaran);  
+        System.out.println("Jumlah Keseluruhan adalah\t\t: " + total + "\nRata-Ratanya adalah\t\t\t: " + total / putaran+"\n\n");  
         /*ini taruh bawah biar ngga error prosesnyaa
         lanjut mencari posisi index dengan JOptionPane!
         keknya sih logikanya pakai looping ganfda kayak buat print*/
@@ -50,6 +51,7 @@ public class TugasPL1 {
             /*menjumlahkan semua eleemnt yang mempunyai indeks ganjil
               Q apakah ngoding bareng bisa dilakukan realtime seperti canva, spreadsheet, doc dll?*/
             total =0;
+            System.out.println("SECOND ARRAY");
             for (int i = 0; i < nilai.length; i++) {
                 for (int f = 0; f < nilai[i].length; f++) {
                     if (f % 2 == 1) {
@@ -65,6 +67,7 @@ public class TugasPL1 {
             //nah kemudian memunculkan lagi tuh hasil yang baru
         } else {
             JOptionPane.showMessageDialog(null, "Elemen " + ganti + " tidak ditemukan pada Array", "ELEMEN TIDAK DITEMUKAN", JOptionPane.ERROR_MESSAGE);
+            System.out.println("(TIDAK ADA PERUBAHAN)");
         }
         System.out.println("Jumlah indeks ganjil adalah\t\t: " + total);
     }
