@@ -8,17 +8,21 @@ public class TugasPL1 {
         double total = 0; //kuncinya
         //variabel untuk menghitung jumlah angka/elemen array
         int putaran = 0; //the key
+        //kita buat variabel untuk menyimpan nilai array agar bisa ditampilkan di akhir
+        String arraylama = "";
         //looping untuk memunculkan elemen array
         System.out.println("ORIGINAL ARRAY");
         for (int a = 0; a < nilai.length; a++) {
             for (int b = 0; b < nilai[a].length; b++) {
                 //menampilkan seluruh elemen
                 System.out.print(nilai[a][b]+" ");
+                arraylama += nilai[a][b]+" ";
                 //menjumlahkan semua elemen
                 total += nilai[a][b];
                 //menghitung banyaknya elemen
                 putaran++;
             }
+            arraylama += "\n";
             System.out.print("\n");            
         }
         System.out.println("Jumlah Keseluruhan adalah\t\t: " + total + "\nRata-Ratanya adalah\t\t\t: " + total / putaran+"\n\n");  
@@ -37,13 +41,13 @@ public class TugasPL1 {
             for(int f=0;f<nilai[i].length;f++){
                 if (nilai[i][f]==ganti){
                     indeks += "["+i+"]["+f+"]\n";//ternyata bisa ygy, tak kra cuman angka aja yang bisa
-                    putaran++;
+                    putaran++;//menghitung jumlah elemen
+                    
                 }
             }
         }
         if(putaran>1){//ini mengecek jika ada posisi yang ditemukan
             JOptionPane.showMessageDialog(null,"Elemen "+ganti+" berada pada indeks:\n"+indeks);
-            indeks = "";//indeks dikosongkan untuk menyimpan nilai array untuk ditampilkan di akhir
             //masukkan angka baru untuk pengganti
             String angka = JOptionPane.showInputDialog("Mau diganti dengan angka berapa?");
             int baru = Integer.parseInt(angka);
@@ -54,26 +58,23 @@ public class TugasPL1 {
             total =0;
             System.out.println("SECOND ARRAY");
             for (int i = 0; i < nilai.length; i++) {
-                for (int f = 0; f < nilai[i].length; f++) {
-                    indeks += nilai[i][f]+" ";//ini harusnya outputnya 1 baris
-                    //ini harusnya bisa sih ya kita gabungkan pakai or, cuman untu prosesnya gimana ya, kita coba dulu sama ngga hasilnya
-                    if (f % 2 == 1) {//mengecek apakah indeksnya ganjil
+                for (int f=0; f < nilai[i].length; f++) {
+                    if (f%2 == 1) {
                         total += nilai[i][f];
                     }
-                    if (nilai[i][f] == ganti){//mengganti elemen lama dengan nilai baru
+                    if (nilai[i][f] == ganti) {
                         nilai[i][f] = baru;
                     }
                     System.out.print(nilai[i][f] + " ");
                   }
                 System.out.print("\n");
-                indeks += "\n";//nah kasih ini harusnya bisa jadi 2 baris
             }
             //nah kemudian memunculkan lagi tuh hasil yang baru
         } else {
             JOptionPane.showMessageDialog(null, "Elemen " + ganti + " tidak ditemukan pada Array", "ELEMEN TIDAK DITEMUKAN", JOptionPane.ERROR_MESSAGE);
             System.out.println("(TIDAK ADA PERUBAHAN)");
-            System.out.println(indeks);
+            System.out.print(arraylama);//di sini kita munculkan kembali array yang lama
         }
-        System.out.println("Jumlah indeks ganjil adalah\t\t: " + total);
+        System.out.println("Jumlah indeks ganjil adalah\t\t: "+total);
     }
 }
