@@ -52,25 +52,19 @@ public class TugasPL1 {
             total =0;
             for (int i = 0; i < nilai.length; i++) {
                 for (int f = 0; f < nilai[i].length; f++) {
-                    if (f%2==1){
-                    total += nilai[i][f];
-                }
+                    if (f % 2 == 1) {
+                        total += nilai[i][f];
+                    }
                     if (nilai[i][f] == ganti) {
                         nilai[i][f] = baru;
                     }
-                    
-                }
+                    System.out.print(nilai[i][f] + " ");
+                  }
+                System.out.print("\n");
             }
             //nah kemudian memunculkan lagi tuh hasil yang baru
         } else {
             JOptionPane.showMessageDialog(null, "Elemen " + ganti + " tidak ditemukan pada Array", "ELEMEN TIDAK DITEMUKAN", JOptionPane.ERROR_MESSAGE);
-        }
-        //meskipun error tetap ditampilkan ygy
-        for (int i = 0; i < nilai.length; i++) {
-            for (int f = 0; f < nilai[i].length; f++) {
-                System.out.print(nilai[i][f] + " ");
-            }
-            System.out.print("\n");
         }
         System.out.println("Jumlah indeks ganjil adalah\t\t: " + total);
     }
