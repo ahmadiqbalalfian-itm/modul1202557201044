@@ -43,6 +43,7 @@ public class TugasPL1 {
         }
         if(putaran>1){//ini mengecek jika ada posisi yang ditemukan
             JOptionPane.showMessageDialog(null,"Elemen "+ganti+" berada pada indeks:\n"+indeks);
+            indeks = "";//indeks dikosongkan untuk menyimpan nilai array untuk ditampilkan di akhir
             //masukkan angka baru untuk pengganti
             String angka = JOptionPane.showInputDialog("Mau diganti dengan angka berapa?");
             int baru = Integer.parseInt(angka);
@@ -54,20 +55,24 @@ public class TugasPL1 {
             System.out.println("SECOND ARRAY");
             for (int i = 0; i < nilai.length; i++) {
                 for (int f = 0; f < nilai[i].length; f++) {
-                    if (f % 2 == 1) {
+                    indeks += nilai[i][f]+" ";//ini harusnya outputnya 1 baris
+                    //ini harusnya bisa sih ya kita gabungkan pakai or, cuman untu prosesnya gimana ya, kita coba dulu sama ngga hasilnya
+                    if (f % 2 == 1) {//mengecek apakah indeksnya ganjil
                         total += nilai[i][f];
                     }
-                    if (nilai[i][f] == ganti) {
+                    if (nilai[i][f] == ganti){//mengganti elemen lama dengan nilai baru
                         nilai[i][f] = baru;
                     }
                     System.out.print(nilai[i][f] + " ");
                   }
                 System.out.print("\n");
+                indeks += "\n";//nah kasih ini harusnya bisa jadi 2 baris
             }
             //nah kemudian memunculkan lagi tuh hasil yang baru
         } else {
             JOptionPane.showMessageDialog(null, "Elemen " + ganti + " tidak ditemukan pada Array", "ELEMEN TIDAK DITEMUKAN", JOptionPane.ERROR_MESSAGE);
             System.out.println("(TIDAK ADA PERUBAHAN)");
+            System.out.println(indeks);
         }
         System.out.println("Jumlah indeks ganjil adalah\t\t: " + total);
     }
