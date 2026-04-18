@@ -35,18 +35,18 @@ public class TugasPL1 {
         Kita manfaatkan variabel putaran, kita ganti 0 dulu
         setelah itu kita taruh di putaran kedua, and...
         masukkan ganti*/
-        putaran=0;
+        putaran=0;//nilai sebelumnya untuk menghitung rata-rata, lanjut dikosongkan untuk digunakan lagi
         String indeks = "";
         for(int i=0;i<nilai.length;i++){
             for(int f=0;f<nilai[i].length;f++){
                 if (nilai[i][f]==ganti){
                     indeks += "["+i+"]["+f+"]\n";//ternyata bisa ygy, tak kra cuman angka aja yang bisa
-                    putaran++;//menghitung jumlah elemen
+                    putaran++;//digunakan untuk mengecek jumlah elemen yang harus diganti
                     
                 }
             }
         }
-        if(putaran>1){//ini mengecek jika ada posisi yang ditemukan
+        if(putaran>1){//menyeleksi jika ada elemen yang harus diganti
             JOptionPane.showMessageDialog(null,"Elemen "+ganti+" berada pada indeks:\n"+indeks);
             //masukkan angka baru untuk pengganti
             String angka = JOptionPane.showInputDialog("Mau diganti dengan angka berapa?");
@@ -70,7 +70,7 @@ public class TugasPL1 {
                 System.out.print("\n");
             }
             //nah kemudian memunculkan lagi tuh hasil yang baru
-        } else {
+        } else {//jika tidak ada elemen yang harus diganti
             JOptionPane.showMessageDialog(null, "Elemen " + ganti + " tidak ditemukan pada Array", "ELEMEN TIDAK DITEMUKAN", JOptionPane.ERROR_MESSAGE);
             System.out.println("(TIDAK ADA PERUBAHAN)");
             System.out.print(arraylama);//di sini kita munculkan kembali array yang lama
